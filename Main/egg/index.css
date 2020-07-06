@@ -1,0 +1,281 @@
+html body {
+  background: radial-gradient(ellipse at center, #061a33 0%, #000000 100%);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.container .egg {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto;
+  background-color: #ffffff;
+  width: 300px;
+  height: 300px;
+  z-index: 4;
+  border-radius: 50%;
+  box-shadow: inset #ffffff 4px 2px 6px 10px,
+    inset rgba(0, 0, 0, 0.2) 0 0 20px 8px;
+  animation: sizzlin 1.6s linear alternate infinite;
+}
+
+.container .egg:before,
+.container .egg:after {
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  height: 0;
+  border-radius: 50%;
+}
+
+.container .egg:before {
+  top: -2px;
+  left: 4px;
+  width: 60%;
+  padding-bottom: 60%;
+  box-shadow: inset #ffffff -2px -12px 4px 6px,
+    inset rgba(0, 0, 0, 0.1) 2px 0px 12px 4px;
+}
+
+.container .egg:after {
+  bottom: 2px;
+  right: 2px;
+  width: 70%;
+  padding-bottom: 70%;
+  box-shadow: inset #ffffff 12px 12px 4px 6px,
+    inset rgba(0, 0, 0, 0.1) -6px 0px 12px 4px;
+}
+
+.container .egg .yolk {
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  background: #ffdb10;
+  box-shadow: inset 10px 1px 0 #ffcc24;
+  z-index: 1;
+}
+
+.container .egg .yolk .eyes {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background: #000;
+  border-radius: 100%;
+  left: 35px;
+  top: 58px;
+  animation: eye-blink 2s infinite;
+}
+
+.container .egg .yolk .eyes::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #000;
+  border-radius: 100%;
+  left: 60px;
+}
+
+.container .egg .yolk .smile {
+  position: relative;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  width: 10px;
+  height: 6px;
+  background: transparent;
+  border: 5px solid #000;
+  left: 63px;
+  top: 55px;
+}
+
+.container .egg .yolk .smile::before {
+  background: #ffdb10;
+  width: 30px;
+  height: 7px;
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: -5.5px;
+}
+
+.container .egg .yolk .cheeks {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: #ff7e7e;
+  left: 25px;
+  top: 42px;
+}
+
+.container .egg .yolk .cheeks::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: #ff7e7e;
+  left: 83px;
+}
+
+.container .egg .yolk .shine {
+  position: relative;
+  width: 8px;
+  height: 20px;
+  border-radius: 200px;
+  background: #fff;
+  left: 110px;
+  top: -20px;
+  transform: rotate(-35deg);
+}
+
+.container .egg .yolk .shine::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 100%;
+  top: -12px;
+  right: 2px;
+}
+@-webkit-keyframes eye-blink {
+  0% {
+    transform: scaleY(1);
+  }
+  18% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(0);
+  }
+  25% {
+    transform: scaleY(1);
+  }
+  38% {
+    transform: scaleY(1);
+  }
+  40% {
+    transform: scaleY(0);
+  }
+  45% {
+    transform: scaleY(1);
+  }
+  80% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes eye-blink {
+  0% {
+    transform: scaleY(1);
+  }
+  18% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(0);
+  }
+  25% {
+    transform: scaleY(1);
+  }
+  38% {
+    transform: scaleY(1);
+  }
+  40% {
+    transform: scaleY(0);
+  }
+  45% {
+    transform: scaleY(1);
+  }
+  80% {
+    transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes sizzlin {
+  0% {
+    transform: rotate(0) scale(0.98);
+  }
+  10% {
+    transform: rotate(0) scale(1.01);
+  }
+  20% {
+    transform: rotate(2deg) scale(0.997);
+  }
+  25% {
+    transform: rotate(2deg) scale(0.998);
+  }
+  30% {
+    transform: rotate(2deg) scale(1.01);
+  }
+  40% {
+    transform: rotate(-2deg) scale(0.995);
+  }
+  50% {
+    transform: rotate(-2deg) scale(1);
+  }
+  60% {
+    transform: rotate(-3deg) scale(0.996);
+  }
+  80% {
+    transform: rotate(1deg) scale(1);
+  }
+  90% {
+    transform: rotate(1deg) scale(0.997);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes sizzlin {
+  0% {
+    transform: rotate(0) scale(0.98);
+  }
+  10% {
+    transform: rotate(0) scale(1.01);
+  }
+  20% {
+    transform: rotate(2deg) scale(0.997);
+  }
+  25% {
+    transform: rotate(2deg) scale(0.998);
+  }
+  30% {
+    transform: rotate(2deg) scale(1.01);
+  }
+  40% {
+    transform: rotate(-2deg) scale(0.995);
+  }
+  50% {
+    transform: rotate(-2deg) scale(1);
+  }
+  60% {
+    transform: rotate(-3deg) scale(0.996);
+  }
+  80% {
+    transform: rotate(1deg) scale(1);
+  }
+  90% {
+    transform: rotate(1deg) scale(0.997);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+/*# sourceMappingURL=index.css.map */
