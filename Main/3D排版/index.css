@@ -33,7 +33,7 @@ body {
   transform: rotateY(40deg) rotateX(33deg) translateZ(0);
 }
 .layer:after {
-  font: 150px/0.65 楷体;
+  font: 150px/0.65 Arial, Helvetica, sans-serif;
   font-weight: bold;
   content: " \e75d \e6b4 ";
   font-family: "iconfont";
