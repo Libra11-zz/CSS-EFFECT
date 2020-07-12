@@ -1,0 +1,102 @@
+html body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e0e5ed;
+  font-family: "Arial Narrow Bold", sans-serif;
+}
+.container {
+  width: 350px;
+  height: 700px;
+  border-radius: 20px;
+  background: #e0e5ed;
+  box-shadow: 12px 12px 24px #c3c7ce, -12px -12px 24px #fdffff;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-rows: 30px 60px;
+  .topbar {
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #ff9900;
+    font-weight: bold;
+    text-shadow: 2px 2px rgb(151, 145, 145);
+  }
+  .calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: 120px, repeat(5, 60px);
+    justify-content: center;
+    align-content: end;
+    gap: 20px;
+    .btn {
+      outline: none;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 16px;
+      background: linear-gradient(145deg, #f0f5fe, #caced5);
+      box-shadow: 8px 8px 16px #bec3c9, -8px -8px 16px #ffffff;
+      &:hover {
+        background: linear-gradient(145deg, #caced5, #f0f5fe);
+        box-shadow: 6px 6px 12px #bec3c9, -6px -6px 12px #ffffff;
+      }
+    }
+    .btn_click {
+      outline: none;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 16px;
+      background: linear-gradient(145deg, #f0f5fe, #caced5);
+      box-shadow: 8px 8px 16px #bec3c9, -8px -8px 16px #ffffff;
+      &:hover {
+        background: linear-gradient(145deg, #caced5, #f0f5fe);
+        box-shadow: 6px 6px 12px #bec3c9, -6px -6px 12px #ffffff;
+      }
+    }
+    .btn0 {
+      width: 140px;
+      height: 60px;
+      border-radius: 30px;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      &:hover {
+        background: linear-gradient(145deg, #caced5, #f0f5fe);
+        box-shadow: 6px 6px 12px #bec3c9, -6px -6px 12px #ffffff;
+      }
+    }
+    .btn1 {
+      color: #ff9900;
+      // font-weight: bold;
+    }
+    .txt {
+      margin-bottom: 20px;
+      grid-column-start: 1;
+      grid-column-end: 5;
+      border: none;
+      outline: none;
+      height: 60px;
+      border-radius: 10px;
+      background: #e0e5ed;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      font-size: 48px;
+      // box-shadow: inset 5px 5px 10px #c3c7ce, inset 0px 0px 10px #fdffff;
+    }
+  }
+}
