@@ -1,0 +1,31 @@
+body {
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+body * {
+  z-index: 20;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+#light {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  z-index: 10;
+  box-shadow: inset 0px 0px 150px 166px rgba(0, 0, 0, 1);
+}
+
+.article {
+  position: relative;
+  font-size: 24px;
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.article * {
+  margin-bottom: 20px;
+}
