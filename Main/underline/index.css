@@ -1,0 +1,25 @@
+body {
+  background-color: #222b40;
+  font-size: 3rem;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  color: #dfe5f3;
+  text-decoration: none;
+  background-image: linear-gradient(#222b40, #222b40),
+    linear-gradient(rgb(176, 251, 188), rgb(176, 251, 188)),
+    linear-gradient(#feb2b2, #feb2b2);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
+}
+
+a:hover {
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+}
