@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2be0ec;
+}
+.container {
+  width: 700px;
+  height: 300px;
+  padding: 0 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container #coin {
+  animation: bigs 2s linear;
+  transform-origin: center;
+}
+.container #coin #bg {
+  animation: colors 2s linear forwards;
+}
+.container #coin #stroke {
+  stroke-dasharray: 512;
+  stroke-dashoffset: 0;
+  animation: dash 2s linear;
+  transform-origin: center;
+  transform: rotateZ(-90deg);
+}
+.container #coin #text #Rectangle2 {
+  width: 0;
+  animation: widthUp 1s linear forwards;
+}
+.container #coin #text #Rectangle3 {
+  width: 0;
+  animation: widthUp2 1s linear forwards 0.5s;
+}
+.container #coin #text #Vector1 {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 0;
+  animation: dash2 1s linear;
+}
+.container #collect {
+  animation: bigs 2s linear;
+  transform-origin: center;
+}
+.container #collect #bg {
+  animation: colors 2s linear forwards;
+}
+.container #collect #stroke {
+  stroke-dasharray: 512;
+  stroke-dashoffset: 0;
+  animation: dash 2s linear;
+  transform-origin: center;
+  transform: rotateZ(-90deg);
+}
+.container #collect #content {
+  transform-origin: center;
+  animation: rota 2s linear forwards;
+}
+.container #collect #content #eyeandmouse {
+  transform-origin: center;
+  animation: scales 2s linear forwards;
+}
+.container #like {
+  animation: bigs 2s linear;
+  transform-origin: center;
+}
+.container #like #bg {
+  animation: colors 2s linear forwards;
+}
+.container #like #stroke {
+  stroke-dasharray: 512;
+  stroke-dashoffset: 0;
+  animation: dash 2s linear;
+  transform-origin: center;
+  transform: rotateZ(-90deg);
+}
+.container #like #hand {
+  transform-origin: center;
+  animation: handRota 2s linear;
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 512;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash2 {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes widthUp {
+  from {
+    width: 0;
+  }
+  to {
+    width: 79px;
+  }
+}
+@keyframes widthUp2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 103px;
+  }
+}
+@keyframes bigs {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes colors {
+  from {
+    fill: #757575;
+  }
+  to {
+    fill: #016d90;
+  }
+}
+@keyframes rota {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+@keyframes scales {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes handRota {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

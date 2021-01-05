@@ -1,0 +1,178 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  // 设置flex布局，使内容水平垂直居中
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(43, 224, 236);
+}
+
+.container {
+  // 设置容器基本属性
+  width: 700px;
+  height: 300px;
+  padding: 0 40px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+  // 设置flex布局，使内容平分容器显示
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  #coin {
+    // 添加变大动画（所有的动画都会在最后定义）
+    animation: bigs 2s linear;
+    transform-origin: center;
+    #bg {
+      // 添加背景颜色渐变动画
+      animation: colors 2s linear forwards;
+    }
+    #stroke {
+      // 通过stroke-dasharray和stroke-dashoffset制作画线动画效果
+      stroke-dasharray: 512;
+      stroke-dashoffset: 0;
+      animation: dash 2s linear;
+      transform-origin: center;
+      transform: rotateZ(-90deg);
+    }
+    // "币" 字的动画效果
+    #text {
+      #Rectangle2 {
+        width: 0;
+        animation: widthUp 1s linear forwards;
+      }
+      #Rectangle3 {
+        width: 0;
+        animation: widthUp2 1s linear forwards 0.5s;
+      }
+      #Vector1 {
+        stroke-dasharray: 200;
+        stroke-dashoffset: 0;
+        animation: dash2 1s linear;
+      }
+    }
+  }
+  #collect {
+    animation: bigs 2s linear;
+    transform-origin: center;
+    #bg {
+      animation: colors 2s linear forwards;
+    }
+    #stroke {
+      stroke-dasharray: 512;
+      stroke-dashoffset: 0;
+      animation: dash 2s linear;
+      transform-origin: center;
+      transform: rotateZ(-90deg);
+    }
+    // 收藏内容旋转，同时眼睛和嘴有一个放大的动画
+    #content {
+      transform-origin: center;
+      animation: rota 2s linear forwards;
+      #eyeandmouse {
+        transform-origin: center;
+        animation: scales 2s linear forwards;
+      }
+    }
+  }
+  #like {
+    animation: bigs 2s linear;
+    transform-origin: center;
+    #bg {
+      animation: colors 2s linear forwards;
+    }
+    #stroke {
+      stroke-dasharray: 512;
+      stroke-dashoffset: 0;
+      animation: dash 2s linear;
+      transform-origin: center;
+      transform: rotateZ(-90deg);
+    }
+    #hand {
+      // 点赞时有些许旋转，然后恢复原状动画
+      transform-origin: center;
+      animation: handRota 2s linear;
+    }
+  }
+}
+// 所有动画的定义
+@keyframes dash {
+  from {
+    stroke-dashoffset: 512;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash2 {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes widthUp {
+  from {
+    width: 0;
+  }
+  to {
+    width: 79px;
+  }
+}
+@keyframes widthUp2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 103px;
+  }
+}
+@keyframes bigs {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes colors {
+  from {
+    fill: #757575;
+  }
+  to {
+    fill: #016d90;
+  }
+}
+@keyframes rota {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+@keyframes scales {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes handRota {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
