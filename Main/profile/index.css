@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Comic sans MS";
+}
+.container {
+  padding-top: 20px;
+  background: linear-gradient(to bottom right, #2949f1, #a701f6);
+  display: flex;
+  width: 100vw;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  /* ANIMATION */
+}
+.container .menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.container .menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.container .menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+.container .menu-btn {
+  align-self: flex-end;
+  margin-right: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.container .menu-btn .menu-btn__burger {
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.container .menu-btn .menu-btn__burger::before,
+.container .menu-btn .menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.container .menu-btn .menu-btn__burger::before {
+  transform: translateY(-10px);
+}
+.container .menu-btn .menu-btn__burger::after {
+  transform: translateY(10px);
+}
+.container .circle1 {
+  top: 60px;
+  left: -70px;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(to bottom right, #3545f1, #712ff4);
+  box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+}
+.container .circle2 {
+  top: 60px;
+  right: 20px;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(to bottom right, #6532f0, #712cef);
+  box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+}
+.container .circle3 {
+  top: 260px;
+  left: 80%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to bottom right, #8225f2, #8c1aed);
+  box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+}
+.container .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  padding: 30px;
+}
+.container .info .avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .info .avatar-container .avatar {
+  position: relative;
+}
+.container .info .avatar-container .avatar .avatar-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #ddd;
+  transition: all 0.5s;
+}
+.container .info .avatar-container .avatar .avatar-img:hover {
+  transition: all 0.5s;
+  border: 3px solid #ff9900;
+}
+.container .info .avatar-container .avatar .level {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #ff9900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  background: #fff;
+  color: #ff9900;
+  left: -8px;
+  bottom: 0;
+}
+.container .info .detail {
+  flex: 1;
+  margin-left: 20px;
+  margin-top: 40px;
+  color: #fff;
+}
+.container .info .detail .name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.container .info .detail .city {
+  font-weight: lighter;
+  color: #ddd;
+  margin-bottom: 16px;
+}
+.container .info .detail .intro {
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+.container .bilibili-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container .bilibili-container .bilibili {
+  height: 100px;
+  font-size: 20px;
+  padding: 0px 30px;
+  margin: 0px 30px;
+  border-radius: 30px;
+  color: #fff;
+  background: #272938;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  position: absolute;
+  top: -50px;
+}
+.container .bilibili-container .bilibili .name {
+  font-size: 16px;
+  color: #eee;
+  font-family: "腾翔爱情体简";
+  font-weight: lighter;
+}
+.container .bilibili-container .bilibili .num {
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.container .bilibili-container .bilibili .line {
+  width: 2px;
+  height: 46px;
+  margin: 0 40px;
+  background: #eee;
+}
+.container .bilibili-container .bilibili .follwing {
+  margin-right: 40px;
+}
+.container .test {
+  color: #fff;
+  width: 100vw;
+  padding: 50px 20px 20px 20px;
+}

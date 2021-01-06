@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #303878;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #333c80, #2b326c);
+  box-shadow: 16px 16px 32px #293067, -16px -16px 32px #374089;
+  position: relative;
+}
+.container:hover {
+  background: linear-gradient(145deg, #2b326c, #333c80);
+  box-shadow: 16px 16px 32px #293067, -16px -16px 32px #374089;
+}
+.container:active svg #fingerprint2 #Vector3 {
+  stroke-dasharray: 75;
+  stroke-dashoffset: 0;
+  animation: dash3 2s linear;
+}
+.container:active svg #fingerprint2 #Vector4 {
+  stroke-dasharray: 325;
+  stroke-dashoffset: 0;
+  animation: dash4 2s linear;
+}
+.container:active svg #fingerprint2 #Vector5 {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 0;
+  animation: dash5 2s linear;
+}
+.container:active svg #fingerprint2 #Vector6 {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 0;
+  animation: dash6 2s linear;
+}
+.container:active svg #fingerprint2 #Vector7 {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 0;
+  animation: dash7 2s linear;
+}
+.container:active svg #fingerprint2 #Vector8 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 0;
+  animation: dash8 2s linear;
+}
+.container:active svg #fingerprint2 #Vector9 {
+  stroke-dasharray: 75;
+  stroke-dashoffset: 0;
+  animation: dash9 2s linear;
+}
+.container:active svg #fingerprint2 #Vector10 {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 0;
+  animation: dash10 2s linear;
+}
+.container:active svg #fingerprint2 #Vector11 {
+  stroke-dasharray: 125;
+  stroke-dashoffset: 0;
+  animation: dash11 2s linear;
+}
+.container svg {
+  width: 300px;
+  position: absolute;
+  left: 50px;
+  top: 20px;
+}
+@keyframes dash3 {
+  from {
+    stroke-dashoffset: 75;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash4 {
+  from {
+    stroke-dashoffset: 325;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash5 {
+  from {
+    stroke-dashoffset: 150;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash6 {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash7 {
+  from {
+    stroke-dashoffset: 350;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash8 {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash9 {
+  from {
+    stroke-dashoffset: 75;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash10 {
+  from {
+    stroke-dashoffset: 50;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash11 {
+  from {
+    stroke-dashoffset: 125;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

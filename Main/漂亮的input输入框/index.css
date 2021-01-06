@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #e2deff;
+}
+.search-icon {
+  background-color: #e2deff;
+  position: relative;
+}
+.search-icon input {
+  width: 600px;
+  height: 120px;
+  border-radius: 15px;
+  background-color: #5f46ff;
+  box-shadow: 2px 3px 15px #5f46ff;
+  outline: none;
+  color: white;
+  font-size: 48px;
+  border: none;
+  padding-left: 120px;
+  caret-color: white;
+}
+.search-icon input:focus {
+  border: none;
+  outline: none;
+}
+.circle {
+  position: relative;
+  display: block;
+  height: 38px;
+  width: 38px;
+  background-color: #5f46ff;
+  border-radius: 70px;
+  z-index: 0;
+  border: 10px solid white;
+  transition: all 0.6s;
+  z-index: 1;
+  left: 25px;
+  top: -100px;
+}
+.handle {
+  position: absolute;
+  background-color: white;
+  top: 56px;
+  left: 24px;
+  width: 90px;
+  height: 10px;
+  display: block;
+  transform: rotate(45deg);
+  cursor: pointer;
+  float: right;
+  border-radius: 2px;
+}
+.handle:after {
+  content: "";
+  background-color: white;
+  width: 90px;
+  height: 10px;
+  display: block;
+  float: right;
+  border-radius: 2px;
+  transition: all 0.6s;
+  z-index: -1;
+}
+.open .circle {
+  transform: scale(0.02);
+  transform-origin: 40% 40%;
+  background: white;
+  border-color: white;
+}
+.open .handle:after {
+  transform-origin: center center;
+  transform: rotate(90deg);
+}

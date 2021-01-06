@@ -10,84 +10,7 @@ body {
   align-items: center;
   background-color: #2be0ec;
 }
-.container {
-  width: 700px;
-  height: 300px;
-  padding: 0 40px;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.container #coin {
-  animation: bigs 2s linear;
-  transform-origin: center;
-}
-.container #coin #bg {
-  animation: colors 2s linear forwards;
-}
-.container #coin #stroke {
-  stroke-dasharray: 512;
-  stroke-dashoffset: 0;
-  animation: dash 2s linear;
-  transform-origin: center;
-  transform: rotateZ(-90deg);
-}
-.container #coin #text #Rectangle2 {
-  width: 0;
-  animation: widthUp 1s linear forwards;
-}
-.container #coin #text #Rectangle3 {
-  width: 0;
-  animation: widthUp2 1s linear forwards 0.5s;
-}
-.container #coin #text #Vector1 {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 0;
-  animation: dash2 1s linear;
-}
-.container #collect {
-  animation: bigs 2s linear;
-  transform-origin: center;
-}
-.container #collect #bg {
-  animation: colors 2s linear forwards;
-}
-.container #collect #stroke {
-  stroke-dasharray: 512;
-  stroke-dashoffset: 0;
-  animation: dash 2s linear;
-  transform-origin: center;
-  transform: rotateZ(-90deg);
-}
-.container #collect #content {
-  transform-origin: center;
-  animation: rota 2s linear forwards;
-}
-.container #collect #content #eyeandmouse {
-  transform-origin: center;
-  animation: scales 2s linear forwards;
-}
-.container #like {
-  animation: bigs 2s linear;
-  transform-origin: center;
-}
-.container #like #bg {
-  animation: colors 2s linear forwards;
-}
-.container #like #stroke {
-  stroke-dasharray: 512;
-  stroke-dashoffset: 0;
-  animation: dash 2s linear;
-  transform-origin: center;
-  transform: rotateZ(-90deg);
-}
-.container #like #hand {
-  transform-origin: center;
-  animation: handRota 2s linear;
-}
+/*定义一些需要用到的动画*/
 @keyframes dash {
   from {
     stroke-dashoffset: 512;
@@ -162,4 +85,82 @@ body {
   100% {
     transform: rotate(0deg);
   }
+}
+.container {
+  width: 700px;
+  height: 300px;
+  padding: 0 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container #coin {
+  animation: bigs 2s linear;
+  transform-origin: center;
+}
+.container #coin #bg {
+  animation: colors 2s linear forwards;
+}
+.container #coin #stroke {
+  stroke-dasharray: 512;
+  stroke-dashoffset: 0;
+  animation: dash 2s linear;
+  transform-origin: center;
+  transform: rotateZ(-90deg);
+}
+.container #coin #text #Rectangle2 {
+  width: 0;
+  animation: widthUp 1s linear forwards;
+}
+.container #coin #text #Rectangle3 {
+  width: 0;
+  animation: widthUp2 1s linear forwards 0.5s;
+}
+.container #coin #text #Vector1 {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 0;
+  animation: dash2 1s linear;
+}
+.container #collect {
+  animation: bigs 2s linear;
+  transform-origin: center;
+}
+.container #collect #bg {
+  animation: colors 2s linear forwards;
+}
+.container #collect #stroke {
+  stroke-dasharray: 512;
+  stroke-dashoffset: 0;
+  animation: dash 2s linear;
+  transform-origin: center;
+  transform: rotateZ(-90deg);
+}
+.container #collect #content {
+  transform-origin: center;
+  animation: rota 2s linear forwards;
+}
+.container #collect #content #eyeandmouse {
+  transform-origin: center;
+  animation: scales 2s linear forwards;
+}
+.container #like {
+  animation: bigs 2s linear;
+  transform-origin: center;
+}
+.container #like #bg {
+  animation: colors 2s linear forwards;
+}
+.container #like #stroke {
+  stroke-dasharray: 512;
+  stroke-dashoffset: 0;
+  animation: dash 2s linear;
+  transform-origin: center;
+  transform: rotateZ(-90deg);
+}
+.container #like #hand {
+  transform-origin: center;
+  animation: handRota 2s linear;
 }
