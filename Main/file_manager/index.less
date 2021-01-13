@@ -1,24 +1,33 @@
+// 引入 Montserrat 字体
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,800&display=swap");
 * {
+  // 初始 reset
   padding: 0;
   margin: 0;
+  // 更改盒子模型
   box-sizing: border-box;
+  // 设置字体
   font-family: "Montserrat", sans-serif;
 }
 body {
   width: 100vw;
   height: 100vh;
+  // 使用flex布局设置水平垂直居中
   display: flex;
   justify-content: center;
   align-items: center;
+  // 设置渐变的背景颜色
   background: linear-gradient(to bottom right, #272c46, #464c6d);
 }
+// 包含所有布局样式的容器
 .container {
   width: 480px;
   height: 1042px;
   border-radius: 50px;
+  // 设置一个渐变的背景颜色，用来模拟渐变边框
   background: linear-gradient(to bottom, #fba85c, rgba(251, 168, 92, 0.1));
   position: relative;
+  // 设置一个稍小于容器的伪元素并居中，使得上面的背景颜色只露出四周一圈，从而达到渐变边框的效果
   &:after {
     content: "";
     position: absolute;
@@ -38,6 +47,7 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 1;
+    // 返回按钮
     .back {
       width: 50px;
       height: 50px;
@@ -46,6 +56,7 @@ body {
         2px 2px 4px rgba(0, 0, 0, 0.25);
       border-radius: 15px;
       position: relative;
+      // 同样用到伪元素，达到双层的效果
       &:after {
         content: "";
         position: absolute;
@@ -59,6 +70,7 @@ body {
         z-index: 1;
         transition: all 0.6s;
       }
+      // 当鼠标hover的时候，有一个向内凹陷的效果
       &:hover::after {
         box-shadow: inset -2px -2px 4px rgba(160, 160, 160, 0.25),
           inset 2px 2px 4px rgba(0, 0, 0, 0.25);
@@ -80,6 +92,7 @@ body {
       color: #8d92af;
       margin: 0 29px;
     }
+    // menu 菜单，同样使用之前的方式做渐变边框
     .menu {
       width: 36px;
       height: 36px;
@@ -112,6 +125,7 @@ body {
       }
     }
   }
+  // 搜索栏
   .search {
     position: absolute;
     top: 132px;
@@ -128,6 +142,7 @@ body {
       box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.12),
         inset -1px -1px 2px rgba(171, 171, 171, 0.12);
       border-radius: 21px;
+      // 使用after伪元素制作四周凹陷效果
       &:after {
         content: "";
         position: absolute;
@@ -140,6 +155,7 @@ body {
           -1px -1px 1px rgba(170, 170, 170, 0.12);
         border-radius: 18px;
       }
+      // 使用before伪元素制作渐变边框填充四周凹陷区域
       &:before {
         content: "";
         position: absolute;
@@ -163,6 +179,7 @@ body {
         z-index: 2;
       }
     }
+    // 真正的输入栏
     .input {
       width: 407px;
       height: 64px;
@@ -189,7 +206,9 @@ body {
       width: 184px;
       height: 154px;
       padding-left: 40px;
+      // 设置了宽度，使字体图标自适应（以下同理）
       background-size: cover;
+      // 使用提前设计好的svg字体图标（以下同理）
       background-image: url(./svg/file_pupple.svg);
       display: flex;
       flex-direction: column;
@@ -242,6 +261,7 @@ body {
       color: #747999;
     }
   }
+  // 进度条
   .progress {
     position: absolute;
     top: 445px;
@@ -258,6 +278,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+      // 使用多个div分别制作圆形和进度条的圆环
       .circle1 {
         position: absolute;
         width: 192px;
@@ -300,6 +321,7 @@ body {
         width: 138px;
         height: 138px;
         border: 2.5px solid #47affd;
+        // 通过clip-path来制作填充圆环（之前的视频说过这个属性）
         clip-path: polygon(50% 0%, 100% 0%, 100% 3600%, 50% 50%);
       }
       .circle6 {
@@ -364,6 +386,7 @@ body {
       }
     }
   }
+  // item 制作思路和上面的大体一致
   .items {
     position: absolute;
     top: 673px;
