@@ -1,0 +1,13 @@
+<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="image_icon">
+<path id="Vector 26" d="M0 19V0H20V19H0Z" fill="url(#paint0_linear)"/>
+<path id="Vector 27" d="M18 2H2V12L5 10L8.5 12.5L13 7L16 9.5H18V2Z" fill="#454B6F"/>
+<path id="Vector 28" d="M5 7V4H9V7H5Z" fill="#EEA15C"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="10" y1="0" x2="10" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EEA15C"/>
+<stop offset="1" stop-color="#EEA15C" stop-opacity="0.25"/>
+</linearGradient>
+</defs>
+</svg>

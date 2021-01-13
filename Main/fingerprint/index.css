@@ -19,6 +19,7 @@ body {
   position: relative;
 }
 .container:hover {
+  cursor: pointer;
   background: linear-gradient(145deg, #2b326c, #333c80);
   box-shadow: 16px 16px 32px #293067, -16px -16px 32px #374089;
 }

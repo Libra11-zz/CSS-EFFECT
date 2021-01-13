@@ -1,0 +1,15 @@
+<svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="file_icon_blue">
+<path id="Vector 17" d="M10 6H14L10 2V6Z" fill="#4A53A5" stroke="#4A53A5"/>
+<path id="Vector 16" d="M8 1H0V20H15V8H8V1Z" fill="url(#paint0_linear)"/>
+<path id="Vector 18" d="M3 8V6H6V8H3Z" fill="#444B6D"/>
+<path id="Vector 19" d="M3 12V10H10V12H3Z" fill="#444B6D"/>
+<path id="Vector 20" d="M3 16V14H10V16H3Z" fill="#444B6D"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="7.5" y1="1" x2="7.5" y2="20" gradientUnits="userSpaceOnUse">
+<stop stop-color="#5361D7"/>
+<stop offset="1" stop-color="#5361D7" stop-opacity="0.25"/>
+</linearGradient>
+</defs>
+</svg>
