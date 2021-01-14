@@ -1,45 +1,57 @@
+/* 引入 google 字体 */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: italic;
   font-weight: 800;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUPjIg1_i6t8kCHKm459WxZbgjD-w.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUPjIg1_i6t8kCHKm459WxZbgjD-w.ttf)
+    format("truetype");
 }
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUQjIg1_i6t8kCHKm45_Qphzg.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUQjIg1_i6t8kCHKm45_Qphzg.ttf)
+    format("truetype");
 }
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD7g4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD7g4.ttf)
+    format("truetype");
 }
+/* 全局reset */
 * {
   padding: 0;
   margin: 0;
+  /* 更改盒子模型 */
   box-sizing: border-box;
+  /* 设置全局字体 */
   font-family: "Montserrat", sans-serif;
 }
 body {
   width: 100vw;
   height: 100vh;
+  /* flex 布局，设置子元素水平垂直居中 */
   display: flex;
   justify-content: center;
   align-items: center;
+  /* 设置渐变的背景颜色 */
   background: linear-gradient(to bottom right, #272c46, #464c6d);
 }
+/* 包含所有布局样式的容器 */
 .container {
   width: 480px;
   height: 1042px;
   border-radius: 50px;
+  /* 设置一个渐变的背景颜色，用来模拟渐变边框 */
   background: linear-gradient(to bottom, #fba85c, rgba(251, 168, 92, 0.1));
   position: relative;
 }
+/* 设置一个稍小于容器的伪元素并居中，使得container的背景颜色只露出四周一圈，从而达到渐变边框的效果 */
 .container:after {
   content: "";
   position: absolute;
@@ -60,14 +72,17 @@ body {
   justify-content: center;
   z-index: 1;
 }
+/* 返回按钮 */
 .container .top_bar .back {
   width: 50px;
   height: 50px;
   background: #414768;
-  box-shadow: -2px -2px 4px rgba(159, 159, 159, 0.25), 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: -2px -2px 4px rgba(159, 159, 159, 0.25),
+    2px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   position: relative;
 }
+/* 同样用到伪元素，达到双层的效果 */
 .container .top_bar .back:after {
   content: "";
   position: absolute;
@@ -81,9 +96,12 @@ body {
   z-index: 1;
   transition: all 0.6s;
 }
+/* 当鼠标hover的时候，有一个向内凹陷的效果 */
 .container .top_bar .back:hover::after {
-  box-shadow: inset -2px -2px 4px rgba(160, 160, 160, 0.25), inset 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: inset -2px -2px 4px rgba(160, 160, 160, 0.25),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
+/* 字体图标样式 */
 .container .top_bar .back .fa {
   position: absolute;
   top: 13px;
@@ -100,6 +118,7 @@ body {
   color: #8d92af;
   margin: 0 29px;
 }
+/* menu 菜单，同样使用之前的方式做渐变边框 */
 .container .top_bar .menu {
   width: 36px;
   height: 36px;
@@ -127,6 +146,7 @@ body {
   z-index: 2;
   cursor: pointer;
 }
+/* 搜索栏 */
 .container .search {
   position: absolute;
   top: 132px;
@@ -141,9 +161,11 @@ body {
   width: 413px;
   height: 70px;
   background: linear-gradient(270.11deg, #363b59 0.09%, #42486a 99.92%);
-  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.12), inset -1px -1px 2px rgba(171, 171, 171, 0.12);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.12),
+    inset -1px -1px 2px rgba(171, 171, 171, 0.12);
   border-radius: 21px;
 }
+/* 使用after伪元素制作四周凹陷效果 */
 .container .search .input_out:after {
   content: "";
   position: absolute;
@@ -152,9 +174,11 @@ body {
   top: 3px;
   left: 3px;
   background: linear-gradient(270.11deg, #363b59 0.09%, #42486a 99.92%);
-  box-shadow: 1px 1px 2px rgba(130, 130, 130, 0.25), -1px -1px 1px rgba(170, 170, 170, 0.12);
+  box-shadow: 1px 1px 2px rgba(130, 130, 130, 0.25),
+    -1px -1px 1px rgba(170, 170, 170, 0.12);
   border-radius: 18px;
 }
+/* 使用before伪元素制作渐变边框填充四周凹陷区域 */
 .container .search .input_out:before {
   content: "";
   position: absolute;
@@ -173,6 +197,7 @@ body {
   color: #fff;
   z-index: 2;
 }
+/* 真正的输入栏 */
 .container .search .input {
   width: 407px;
   height: 64px;
@@ -199,7 +224,9 @@ body {
   width: 184px;
   height: 154px;
   padding-left: 40px;
+  /* 设置了宽度，使字体图标自适应（以下同理） */
   background-size: cover;
+  /* 使用提前设计好的svg字体图标（以下同理） */
   background-image: url(svg/file_pupple.svg);
   display: flex;
   flex-direction: column;
@@ -220,7 +247,8 @@ body {
   height: 39px;
   margin-top: 10px;
   background: #444b6d;
-  box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.25), inset 3px 3px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.25),
+    inset 3px 3px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   display: flex;
   justify-content: center;
@@ -250,6 +278,7 @@ body {
   line-height: 14px;
   color: #747999;
 }
+/* 进度条 */
 .container .progress {
   position: absolute;
   top: 445px;
@@ -268,12 +297,14 @@ body {
   align-items: center;
   justify-content: center;
 }
+/* 使用多个div分别制作圆形和进度条的圆环 */
 .container .progress .left .circle1 {
   position: absolute;
   width: 192px;
   height: 192px;
   background: #3a4263;
-  box-shadow: inset -2px -2px 4px rgba(134, 134, 134, 0.25), inset 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: inset -2px -2px 4px rgba(134, 134, 134, 0.25),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50%;
 }
 .container .progress .left .circle2 {
@@ -282,7 +313,8 @@ body {
   height: 187px;
   border-radius: 50%;
   background: #3a4263;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25), -2px -2px 2px rgba(149, 144, 144, 0.25);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+    -2px -2px 2px rgba(149, 144, 144, 0.25);
 }
 .container .progress .left .circle4 {
   position: absolute;
@@ -290,7 +322,8 @@ body {
   width: 133px;
   height: 133px;
   background: #3a4263;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25), -2px -2px 1px rgba(82, 88, 129, 0.2);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25),
+    -2px -2px 1px rgba(82, 88, 129, 0.2);
 }
 .container .progress .left .circle3 {
   position: absolute;
@@ -298,7 +331,8 @@ body {
   width: 138px;
   height: 138px;
   background: #3a4263;
-  box-shadow: inset -2px -2px 1px rgba(134, 134, 134, 0.25), inset 2px 2px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: inset -2px -2px 1px rgba(134, 134, 134, 0.25),
+    inset 2px 2px 1px rgba(0, 0, 0, 0.25);
 }
 .container .progress .left .circle5 {
   position: absolute;
@@ -306,6 +340,7 @@ body {
   width: 138px;
   height: 138px;
   border: 2.5px solid #47affd;
+  /* 通过clip-path来制作填充圆环（之前的视频说过这个属性） */
   clip-path: polygon(50% 0%, 100% 0%, 100% 3600%, 50% 50%);
 }
 .container .progress .left .circle6 {
@@ -323,7 +358,8 @@ body {
   height: 54px;
   border-radius: 50%;
   background: #464d71;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), -2px -3px 4px rgba(255, 255, 255, 0.25);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25),
+    -2px -3px 4px rgba(255, 255, 255, 0.25);
 }
 .container .progress .right {
   display: flex;
@@ -378,6 +414,7 @@ body {
   z-index: 1;
   overflow: hidden;
 }
+/* item 制作思路和上面的大体一致 */
 .container .items .item {
   width: 414px;
   height: 108px;
@@ -409,7 +446,8 @@ body {
   width: 55px;
   height: 55px;
   background: linear-gradient(135deg, #323753 0%, #58608a 100%);
-  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.25), -3px -2px 20px rgba(255, 255, 255, 0.25);
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.25),
+    -3px -2px 20px rgba(255, 255, 255, 0.25);
   border-radius: 13px;
 }
 .container .items .item .icon_container .icon {
