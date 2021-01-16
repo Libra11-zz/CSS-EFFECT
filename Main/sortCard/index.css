@@ -1,0 +1,119 @@
+/*===== 引入google字体 =====*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
+
+/*===== 定义一些CSS变量 =====*/
+:root {
+  /*===== 颜色变量 =====*/
+  --name-color: #272a3a;
+  --profession-color: #8a8eaa;
+  --card-color: #ece7d9;
+
+  /*===== 字体相关变量 =====*/
+  --body-font: "Ubuntu", sans-serif;
+  --normal-font-size: 1rem;
+  --smaller-font-size: 0.813rem;
+}
+
+/*===== 基本的 reset 样式 =====*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+}
+
+body {
+  /* 定义背景颜色 */
+  background-color: #e7dbbb;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.drop,
+.container {
+  /* grid布局 */
+  display: grid;
+}
+
+.drop {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  row-gap: 1rem;
+  padding: 2rem;
+  border-radius: 3px;
+  background-color: var(--card-color);
+  cursor: pointer;
+  transition: all 0.6s;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+.container:hover {
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card,
+.data {
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  width: 360px;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem 0.75rem 0.75rem;
+  background-color: var(--card-color);
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 2.5rem;
+}
+
+.img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.name {
+  font-size: var(--normal-font-size);
+  color: var(--name-color);
+  font-weight: 500;
+}
+
+.profession {
+  font-size: var(--smaller-font-size);
+  color: var(--profession-color);
+}
+
+.social {
+  margin: 0 0.375rem;
+  color: var(--profession-color);
+  transition: 0.4s;
+}
+
+.social:hover {
+  color: var(--name-color);
+}
+
+/* 选中的item的类 */
+.sortable-chosen {
+  box-shadow: 8px 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* 拖拽的item的类 */
+.sortable-drag {
+  opacity: 0;
+}

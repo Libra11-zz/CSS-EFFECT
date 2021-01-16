@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== CSS样式 ===== -->
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- ===== fontawsome 字体图标 ===== -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Drag and drop card</title>
+  </head>
+  <body>
+    <div class="drop">
+      <div class="container" id="drop-items">
+        <div class="card">
+          <div class="data">
+            <img src="img/01.jpeg" alt="" class="img" />
+            <div>
+              <h1 class="name">Clay</h1>
+              <span class="profession">Web developer</span>
+            </div>
+          </div>
+
+          <div>
+            <a href="#" class="social"><i class="fa fa-ellipsis-h"></i></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="data">
+            <img src="img/02.jpeg" alt="" class="img" />
+            <div>
+              <h1 class="name">Sara Mill</h1>
+              <span class="profession">Graphic design</span>
+            </div>
+          </div>
+
+          <div>
+            <a href="#" class="social"><i class="fa fa-ellipsis-h"></i></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="data">
+            <img src="img/03.jpeg" alt="" class="img" />
+            <div>
+              <h1 class="name">Robbie Ford</h1>
+              <span class="profession">Ui/Ux design</span>
+            </div>
+          </div>
+
+          <div>
+            <a href="#" class="social"><i class="fa fa-ellipsis-h"></i></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="data">
+            <img src="img/04.jpg" alt="" class="img" />
+            <div>
+              <h1 class="name">Jenny Lit</h1>
+              <span class="profession">Digital marketing</span>
+            </div>
+          </div>
+
+          <div>
+            <a href="#" class="social"><i class="fa fa-ellipsis-h"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--===== 引入 Sortable.js =====-->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+    <!--===== 引入 index.js =====-->
+    <script src="index.js"></script>
+  </body>
+</html>
