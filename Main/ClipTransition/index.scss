@@ -1,0 +1,45 @@
+body {
+  background: #dcf5ff;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-family: "Nunito", "sans-serif";
+}
+
+.inner {
+  background: rgb(3, 238, 255);
+  padding: 1em;
+  border-radius: 10px;
+  width: 250px;
+  clip-path: circle(10% at 90% 20%);
+  transition: all 0.5s ease-in-out;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  &:hover {
+    clip-path: circle(75%);
+    background: #ff9100;
+  }
+
+  h1 {
+    color: white;
+    margin: 0;
+  }
+
+  p {
+    color: white;
+    font-size: 0.8rem;
+  }
+  span {
+    float: right;
+    color: white;
+    font-weight: bold;
+    transition: color 0.5s;
+    position: relative;
+    margin-right: 2%;
+  }
+  &:hover span {
+    color: rgba(255, 255, 255, 0);
+  }
+}

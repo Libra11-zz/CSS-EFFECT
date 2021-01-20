@@ -1,0 +1,47 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #0a0a0a;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+figure {
+  width: 336px;
+  height: 303px;
+  position: relative;
+  background-color: #eaeaea;
+  padding: 19px 19px 85px 19px;
+}
+figure img {
+  width: 100%;
+}
+figcaption {
+  font-family: "Caveat", cursive;
+  font-size: 25px;
+  text-align: center;
+  color: #2c2c2c;
+  margin-top: 22px;
+}
+figure:before,
+figure:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 180px;
+  background-color: rgba(102, 102, 102, 0.6);
+  transform: rotate(-40deg);
+}
+figure:before {
+  top: 3px;
+  left: -55px;
+}
+figure:after {
+  bottom: 3px;
+  right: -60px;
+}
